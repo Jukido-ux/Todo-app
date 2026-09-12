@@ -49,12 +49,33 @@ button {
   margin-bottom: 1.75rem;
 }
 
+.account-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
 .eyebrow {
   margin: 0 0 0.5rem;
   color: #7668d9;
   font-size: 0.72rem;
   font-weight: 800;
   letter-spacing: 0.14em;
+}
+
+.sign-out-button {
+  padding: 0.32rem 0.55rem;
+  border: 0;
+  border-radius: 7px;
+  color: #858b9c;
+  background: transparent;
+  font-size: 0.78rem;
+}
+
+.sign-out-button:hover {
+  color: #6254c4;
+  background: #f2f0ff;
 }
 
 h1 {
@@ -240,6 +261,100 @@ h1 {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+.auth-layer {
+  display: grid;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  place-items: center;
+}
+
+.auth-layer[hidden],
+.todo-card[hidden] {
+  display: none;
+}
+
+.auth-card {
+  width: min(100%, 430px);
+  padding: clamp(1.5rem, 5vw, 2.75rem);
+  border: 1px solid rgb(255 255 255 / 80%);
+  border-radius: 24px;
+  background: rgb(255 255 255 / 88%);
+  box-shadow: 0 24px 60px rgb(59 78 132 / 14%);
+  backdrop-filter: blur(12px);
+}
+
+.auth-form {
+  display: grid;
+  gap: 0.48rem;
+  margin-top: 1.75rem;
+}
+
+.auth-form label {
+  margin-top: 0.45rem;
+  color: #596174;
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1px solid #dce1ef;
+  border-radius: 12px;
+  outline: none;
+  color: inherit;
+  background: #fff;
+}
+
+.auth-form input:focus {
+  border-color: #786ae1;
+  box-shadow: 0 0 0 4px rgb(120 106 225 / 15%);
+}
+
+.form-message {
+  min-height: 1.25rem;
+  margin: 0.5rem 0 0;
+  color: #c74f62;
+  font-size: 0.84rem;
+}
+
+.auth-submit {
+  margin-top: 0.25rem;
+  padding: 0.85rem 1.1rem;
+  border: 0;
+  border-radius: 12px;
+  color: #fff;
+  background: #7668d9;
+  font-weight: 700;
+}
+
+.auth-submit:hover {
+  background: #6254c4;
+}
+
+.auth-switch {
+  margin: 1.25rem 0 0;
+  color: #73798d;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.auth-switch button {
+  padding: 0;
+  border: 0;
+  color: #6254c4;
+  background: transparent;
+  font-weight: 700;
+}
+
+.auth-note {
+  margin: 1.5rem 0 0;
+  color: #9aa0b0;
+  text-align: center;
+  font-size: 0.76rem;
+  line-height: 1.6;
 }
 
 @keyframes enter {
