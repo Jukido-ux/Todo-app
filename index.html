@@ -12,11 +12,14 @@
   </head>
   <body>
     <main class="todo-app">
-      <section class="todo-card" aria-labelledby="page-title">
+      <section class="todo-card" aria-labelledby="page-title" id="todo-card" hidden>
         <header class="todo-header">
-          <p class="eyebrow">TASK PLANNER</p>
+          <div class="account-bar">
+            <p class="eyebrow">TASK PLANNER</p>
+            <button class="sign-out-button" id="sign-out-button" type="button">退出登录</button>
+          </div>
           <h1 id="page-title">今日任务</h1>
-          <p class="subtitle">把重要的事，一件件完成。</p>
+          <p class="subtitle">你好，<span id="current-user"></span>。把重要的事，一件件完成。</p>
         </header>
 
         <form class="task-form" id="task-form">
@@ -43,6 +46,31 @@
         <p class="empty-state" id="empty-state">暂时没有任务，开始规划今天吧。</p>
       </section>
     </main>
+
+    <section class="auth-layer" id="auth-layer" aria-labelledby="auth-title">
+      <div class="auth-card">
+        <p class="eyebrow">TASK PLANNER</p>
+        <h1 id="auth-title">欢迎回来</h1>
+        <p class="subtitle" id="auth-description">登录后查看属于你的任务清单。</p>
+
+        <form class="auth-form" id="auth-form">
+          <label for="username-input">用户名</label>
+          <input id="username-input" name="username" type="text" autocomplete="username" maxlength="24" required />
+
+          <label for="password-input">密码</label>
+          <input id="password-input" name="password" type="password" autocomplete="current-password" minlength="6" required />
+
+          <p class="form-message" id="form-message" aria-live="polite"></p>
+          <button class="auth-submit" id="auth-submit" type="submit">登录</button>
+        </form>
+
+        <p class="auth-switch">
+          <span id="auth-switch-text">还没有账号？</span>
+          <button id="auth-switch-button" type="button">注册账号</button>
+        </p>
+        <p class="auth-note">账号和任务仅保存在当前设备的浏览器中。</p>
+      </div>
+    </section>
 
     <script src="script.js"></script>
   </body>
