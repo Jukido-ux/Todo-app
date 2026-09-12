@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="一个简洁的 Todo 任务管理工具"
+    />
+    <title>今日任务</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="todo-app">
+      <section class="todo-card" aria-labelledby="page-title">
+        <header class="todo-header">
+          <p class="eyebrow">TASK PLANNER</p>
+          <h1 id="page-title">今日任务</h1>
+          <p class="subtitle">把重要的事，一件件完成。</p>
+        </header>
+
+        <form class="task-form" id="task-form">
+          <label class="sr-only" for="task-input">输入新任务</label>
+          <input
+            id="task-input"
+            name="task"
+            type="text"
+            placeholder="添加一项新任务..."
+            autocomplete="off"
+            maxlength="100"
+            required
+          />
+          <button type="submit">添加</button>
+        </form>
+
+        <div class="task-summary" aria-live="polite">
+          <span id="task-count">还没有任务</span>
+          <span class="summary-dot" aria-hidden="true"></span>
+          <span>专注当下</span>
+        </div>
+
+        <ul class="task-list" id="task-list" aria-label="任务列表"></ul>
+        <p class="empty-state" id="empty-state">暂时没有任务，开始规划今天吧。</p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
